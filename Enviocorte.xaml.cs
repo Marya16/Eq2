@@ -19,14 +19,5 @@ namespace Eq2
         {
             // Handle cancel logic here
         }
-
-        private void OnDeleteClicked(object sender, EventArgs e)
-        {
-            // Handle delete logic here
-            ProductTypeEntry.Text = string.Empty;
-            DescriptionEntry.Text = string.Empty;
-            ProductCodeEntry.Text = string.Empty;
-            QuantityPicker.SelectedIndex = -1;
-        }
     }
 }
