@@ -2,9 +2,9 @@ using Microsoft.Maui.Controls;
 
 namespace Eq2
 {
-    public partial class ProductPage : ContentPage
+    public partial class EmbroideryPage : ContentPage
     {
-        public ProductPage()
+        public EmbroideryPage()
         {
             InitializeComponent();
         }
@@ -17,12 +17,10 @@ namespace Eq2
         private void OnApagarDadosClicked(object sender, EventArgs e)
         {
             // Logic to clear data
-            TipoProdutoEntry.Text = string.Empty;
-            FornecedorEntry.Text = string.Empty;
-            CodigoProdutoEntry.Text = string.Empty;
-            MarcaEntry.Text = string.Empty;
-            UnidadePicker.SelectedIndex = -1;
-            CorEntry.Text = string.Empty;
+            PrazoEntry.Text = string.Empty;
+            EntradaEntry.Text = string.Empty;
+            ProdutoEntry.Text = string.Empty;
+            QuantidadePicker.SelectedIndex = -1;
         }
     }
 }

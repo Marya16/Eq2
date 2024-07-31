@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="Eq2.ProductPage"
-             Title="Produto">
+             x:Class="Eq2.SewingPage"
+             Title="Costura">
     <ContentPage.Content>
         <Grid Padding="10" BackgroundColor="LightBlue">
             <Grid.RowDefinitions>
@@ -19,83 +19,72 @@
                 <ColumnDefinition Width="*" />
             </Grid.ColumnDefinitions>
             
-            <Label Text="Produto" 
-                   FontSize="Large" 
+            <Label Text="Costura" 
+                   FontSize="Large"
                    HorizontalOptions="Center" 
                    Grid.Row="0" 
                    Grid.ColumnSpan="2" />
 
-            <Label Text="Tipo produto:" 
+            <Label Text="Produto:"
                    Grid.Row="1" 
                    Grid.Column="0" />
 
-            <Entry x:Name="TipoProdutoEntry" 
+            <Entry x:Name="ProdutoEntry"
                    Grid.Row="1" 
                    Grid.Column="1" />
 
-            <Label Text="Fornecedor:" 
+            <Label Text="Entrada:" 
                    Grid.Row="2" 
                    Grid.Column="0" />
 
-            <Entry x:Name="FornecedorEntry" 
+            <Entry x:Name="EntradaEntry" 
                    Grid.Row="2" 
                    Grid.Column="1" />
 
-            <Label Text="Código do produto:"
-                   Grid.Row="3" 
+            <Label Text="Quantidade:" 
+                   Grid.Row="3"
                    Grid.Column="0" />
-
-            <Entry x:Name="CodigoProdutoEntry" 
-                   Grid.Row="3" 
-                   Grid.Column="1" />
-
-            <Label Text="Marca:" 
-                   Grid.Row="4" 
-                   Grid.Column="0" />
-
-            <Entry x:Name="MarcaEntry" 
-                   Grid.Row="4" 
-                   Grid.Column="1" />
-
-            <Label Text="Unidade:"
-                   Grid.Row="5" 
-                   Grid.Column="0" />
-
-            <Picker x:Name="UnidadePicker" 
-                    Grid.Row="5"
+ 
+            <Picker x:Name="QuantidadePicker"
+                    Grid.Row="3"
                     Grid.Column="1">
 
                 <Picker.ItemsSource>
                     <x:Array Type="{x:Type x:String}">
-                        <x:String>Unidade 1</x:String>
-                        <x:String>Unidade 2</x:String>
-                        <x:String>Unidade 3</x:String>
+                        <x:String>1</x:String>
+                        <x:String>2</x:String>
+                        <x:String>3</x:String>
+                        <x:String>4</x:String>
+                        <x:String>5</x:String>
                     </x:Array>
                 </Picker.ItemsSource>
             </Picker>
 
-            <Label Text="Cor:" 
-                    Grid.Row="6"
-                    Grid.Column="0" />
+            <Label Text="Prazo:"
+                   Grid.Row="4"
+                   Grid.Column="0" />
 
-            <Entry x:Name="CorEntry" 
-                    Grid.Row="6" 
-                    Grid.Column="1" />
+            <Entry x:Name="PrazoEntry"
+                   Grid.Row="4"
+                   Grid.Column="1" />
 
-            <StackLayout Orientation="Horizontal" 
+            <StackLayout Orientation="Vertical" 
                          HorizontalOptions="Center" 
-                         Grid.Row="7"
+                         Grid.Row="5" 
                          Grid.ColumnSpan="2" 
-                         Spacing="20">
+                         Spacing="10">
 
-                <Button Text="Salvar Dados"
-                        BackgroundColor="Green"
-                        TextColor="White"
-                        Clicked="OnSalvarDadosClicked" />
+                <Button Text="Salvar" 
+                        BackgroundColor="LightBlue"
+                        Clicked="OnSalvarClicked" />
 
-                <Button Text="Apagar Dados"
-                        BackgroundColor="Red"
-                        TextColor="White"
+                <Button Text="Cancelar" 
+                        BackgroundColor="LightBlue" 
+                        Clicked="OnCancelarClicked" />
+
+                <Button Text="Apagar Dados" 
+                        BackgroundColor="Red" 
+                        TextColor="White" 
                         Clicked="OnApagarDadosClicked" />
 
             </StackLayout>
